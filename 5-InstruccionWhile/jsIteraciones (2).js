@@ -8,6 +8,7 @@ function mostrar()
 		numero=numero-1
 		
 	}
+	
 
 
 }//FIN DE LA FUNCIÓN
