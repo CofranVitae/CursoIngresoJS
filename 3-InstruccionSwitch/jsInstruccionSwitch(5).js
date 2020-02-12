@@ -8,10 +8,10 @@ laHora=parseInt(laHora)
 //alert (laHora);
 switch(laHora)
 {
-    case(laHora=7):
-    case laHora=8:
-    case laHora=9:
-    case laHora=10:
+    case 07:
+    case 8:
+    case 9:
+    case 10:
 
     {
         alert("Es de mañana")

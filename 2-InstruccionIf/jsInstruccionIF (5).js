@@ -7,14 +7,20 @@ var edad;
 edad=document.getElementById("edad").value;
 
 
-if(edad>=13 && edad<=17)
-{
+//if(edad>=13 && edad<=17)
+
     
 
-}
-else
+//}
+//else
+//{
+  //  alert("usted no es adolescente")
+//}
+//Lo verde esta mal
+
+if(edad<13 || edad>17)
 {
-    alert("usted no es adolescente")
+    alert("No es adolescente")
 }
 
 }//FIN DE LA FUNCIÓN

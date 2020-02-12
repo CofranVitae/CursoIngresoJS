@@ -6,27 +6,27 @@ var mesDelAño = document.getElementById('mes').value;
 //alert (mesDelAño);
 switch(mesDelAño)
 {
-    case mesDelAño="Enero":
-    case mesDelAño="Marzo":
-    case mesDelAño="Mayo":
-    case mesDelAño="Julio":
-    case mesDelAño="Agosto":
-    case mesDelAño="Octubre":
-    case mesDelAño="Diciembre":
+    case "Enero":
+    case "Marzo":
+    case "Mayo":
+    case "Julio":
+    case "Agosto":
+    case "Octubre":
+    case "Diciembre":
         {
             alert("Este mes tiene 31 dias")
             break;
         }
-    case mesDelAño="Abril":
-    case mesDelAño="Junio":
-    case mesDelAño="Septiembre":
-    case mesDelAñp="Noviembre":
+    case "Abril":
+    case "Junio":
+    case "Septiembre":
+    case "Noviembre":
         {
             alert("Este mes tiene 30 dias")
             break;
         
         }
-    case mesDelAño="Febrero":
+    case "Febrero":
         {
             alert("Este mes tiene 28 dias")
             break;

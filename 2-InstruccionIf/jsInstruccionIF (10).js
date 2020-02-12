@@ -2,8 +2,12 @@ function mostrar()
 {
 	//Genero el número RANDOM entre 1 y 10 
 	var num;
+	var max;
+	var min;
+	max=10;
+	min=1;
 	
-	num=Math.floor((Math.random()*10))
+	num=Math.floor((Math.random()*(max+1)-min-1)+min)
 	
     alert(num);
 	

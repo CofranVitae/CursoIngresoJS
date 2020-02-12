@@ -5,7 +5,6 @@ function mostrar()
 	var acumulador=0;
 
 
-
 document.getElementById('suma').value=acumulador;
 document.getElementById('promedio').value=acumulador/5;
 

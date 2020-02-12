@@ -5,23 +5,23 @@ var mesDelAño = document.getElementById('mes').value;
 switch(mesDelAño)
 {
   
-    case mesDelAño="Enero" :
+    case "Enero" :
         {
           alert("Que comiences bien el año!")
           break;
         }
 
-    case mesDelaño="Marzo" :
+    case "Marzo" :
         {
            alert("A clases!") 
            break;
         }
-    case mesDelAño="Julio" :
+    case "Julio" :
         {
             alert("Se vienen las vacaciones!")
             break;
         }
-    case mesDelAño="Diciembre" :
+    case "Diciembre" :
         {
             alert("Felices fiestas!")
             break;

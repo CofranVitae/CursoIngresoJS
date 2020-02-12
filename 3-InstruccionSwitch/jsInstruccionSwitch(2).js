@@ -6,26 +6,26 @@ var mesDelAño = document.getElementById('mes').value;
 switch(mesDelAño)
 {
 
-    case mesDelAño="Enero":
-    case mesDelAño="Febrero":
-    case mesDelAño="Marzo": 
-    case mesdelAño="Abril":
-    case mesdelAño="Mayo":
-    case mesDelAño="Junio":
+    case "Enero":
+    case "Febrero":
+    case "Marzo": 
+    case "Abril":
+    case "Mayo":
+    case "Junio":
         {
             alert("Falta para el invierno")
             break;
         }
-    case mesDelAño="Julio":
-    case mesDelAño="Agosto":
+    case "Julio":
+    case "Agosto":
         {
             alert("Abrigate que hace frio")
             break;
         }
-    case mesDelAño="Septiembre":
-    case mesDelAño="Octubre":
-    case mesDelAño="Noviembre":
-    case mesDelAño="Diciembre":
+    case "Septiembre":
+    case "Octubre":
+    case "Noviembre":
+    case "Diciembre":
         {
             alert("Ya paso el frio, ahora el calor")
             break;
