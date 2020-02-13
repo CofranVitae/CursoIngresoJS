@@ -3,7 +3,7 @@ function mostrar()
 //tomo la edad  
 var laHora = document.getElementById('hora').value;
 laHora=parseInt(laHora)
-if(laHora>=0 && laHora<=24)
+
 switch(laHora)
 {
     case 7:
@@ -44,7 +44,10 @@ switch(laHora)
         alert("Es de noche amiwo")
         break;
     }
-    
+    default:
+    {
+    alert("Esa hora no existe")
+    }
     
     
 

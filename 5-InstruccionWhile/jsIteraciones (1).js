@@ -4,8 +4,8 @@ function mostrar()
 	numero=1;
 	while(numero<=10)
 	{
-		alert(numero)
-		numero=numero+1
+		alert(numero);
+		numero=numero+1;
 		
 	}
 
