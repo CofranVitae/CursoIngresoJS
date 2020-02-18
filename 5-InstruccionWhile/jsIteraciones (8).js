@@ -25,7 +25,7 @@ function mostrar()
 			alert("ese numero no es valido, ingresa otro wachin");
 		}
 		
-		respuesta=prompt("si no queres ingresar mas números, escribí no. ");
+		respuesta=prompt("¿Queres ingresar mas numeros? responde si o no");
 	}
 
 

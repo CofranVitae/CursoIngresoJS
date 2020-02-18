@@ -4,14 +4,14 @@ function mostrar()
 	var num;
 	var max;
 	var min;
-	max=10;
+	max=11;
 	min=1;
 	
-	num=Math.floor((Math.random()*(max+1)-min-1)+min)
+	num=Math.floor((Math.random()*(max+1-min-1)+min));
 	
     alert(num);
 	
-	if(num>=9)
+	if(num>9)
 	{
 		alert("Excelente");
 	}
