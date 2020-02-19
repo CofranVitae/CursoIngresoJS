@@ -64,7 +64,7 @@ function mostrar()
 	document.write("La cantidad de negativos es: "+contador+"<br/>");
 	document.write("Los positivos suman: "+positivos+"<br/>");
 	document.write("La cantidad de positivos es: "+contador2+"<br/>");
-	document.write("La cantidad de ceros es: "+contador3);
+	document.write("La cantidad de ceros es: "+contador3+"<br/>");
 	document.write("La cantidad de numeros pares es: "+contador4+"<br/>");
 	document.write("El promedio de los positivos es: "+promedioPositivo+"<br/>");
 	document.write("El promedio de los negativos es: "+promedioNegativo+"<br/>");

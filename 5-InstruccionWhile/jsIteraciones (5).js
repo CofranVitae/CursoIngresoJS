@@ -1,25 +1,21 @@
 function mostrar()
 {
 
-var sexo;
+var sexo = prompt("ingrese f para femenino o m para masculino").toLowerCase();
 
-while(sexo!="f" && sexo!="m")
+//while(sexo!="f" && sexo!="m")
+while(!(sexo=="f" || sexo=="m"))
 {
-    sexo = prompt("ingrese f o m.");
-    if(sexo!="f" && sexo!="m")
-    {
-        alert("Por favor, ingrese un dato valido.");
-    }
+    sexo = prompt("incrrecto, ingrese f o m.").toLowerCase();
     
 }
 
-    if(sexo=="f")
-    {
-        document.getElementById('Sexo').value="Femenino";
-    }
-    else if(sexo=="m")
-    {
-        document.getElementById("Sexo").value="Masculino";
-    }
-
+if(sexo=="f")
+{
+    document.getElementById("Sexo").value="Femenino";
+}
+else
+{
+    document.getElementById("Sexo").value="Masculino";
+}
 }//FIN DE LA FUNCIÓN
