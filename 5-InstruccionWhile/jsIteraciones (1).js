@@ -1,7 +1,7 @@
 function mostrar()
 {
-	var numero;
-	numero=1;
+	var numero=1;
+	
 	while(numero<=10)
 	{
 		alert(numero);

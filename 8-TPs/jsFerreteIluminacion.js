@@ -24,7 +24,7 @@ function CalcularPrecio ()
      if(cantidad>=6)
      {
         
-        precio=precio-(precio*50)/100;
+        precio-=(precio*50)/100;
 
      }
 
@@ -34,7 +34,7 @@ function CalcularPrecio ()
          {
              case "ArgentinaLuz":
              {
-                 precio=precio-(precio*40)/100;
+                 precio-=(precio*40)/100;
                  break;
              }
              case "FelipeLamparas":
@@ -42,7 +42,7 @@ function CalcularPrecio ()
              case "HazIluminacion":
              case "Osram":
              {
-                precio=precio-(precio*30)/100;
+                precio-=(precio*30)/100;
                 break;
              }
          }
@@ -51,26 +51,26 @@ function CalcularPrecio ()
      {
          if(marca=="ArgentinaLuz" || marca=="FelipeLamparas")
          {
-             precio=precio-(precio*25)/100;
+             precio-=(precio*25)/100;
          }
          else
          {
-             precio=precio-(precio*20)/100;
+             precio-=(precio*20)/100;
          }
      }
      else if(cantidad==3)
      {
          if(marca=="ArgentinaLuz")
          {
-             precio=precio-(precio*15)/100;
+             precio-=(precio*15)/100;
          }
          else if(marca=="FelipeLamparas")
          {
-             precio=precio-(precio*10)/100
+             precio-=(precio*10)/100
          }
          else
          {
-             precio=precio-(precio*5)/100;
+             precio-=(precio*5)/100;
          }
 
      }
@@ -78,7 +78,7 @@ function CalcularPrecio ()
      if(precio>120)
      {
          IIBB=(precio*10)/100;
-         precio=precio+(precio*10)/100;
+         precio+=(precio*10)/100;
          alert("usted pago $"+IIBB+" de IIBB")
      }
      
