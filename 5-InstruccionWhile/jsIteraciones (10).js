@@ -13,54 +13,54 @@ function mostrar()
 	var diferencia;
 	var resto;
 	var respuesta="si"
-
-	while(respuesta!="no")
+	
+	do
 	{
 		numero=prompt("Ingresa un numero");
 		numero=parseInt(numero);
-		
-		resto=numero%2;
-		
+
+		while(isNaN(numero))
+		{
+			numero=parseInt(prompt("Eso no es un numero, por favor ingresa de nuevo"));
+		}
 		
 		if(numero<0)
 		{
 			negativos=numero+negativos;
-			contador=contador+1;
-			promedioNegativo=negativos/contador;
-
-			if(resto==0)
-			{
-				contador4=contador4+1;
-			}
-
+			contador++;
+		
 		}
 		else if(numero>0)
 		{
 			positivos=numero+positivos;
-			contador2=contador2+1;
-			promedioPositivo=positivos/contador2;
-
-			if(resto==0)
-			{
-				contador4=contador4+1;
-			}
-		}
-		else if(numero==0)
-		{
-			contador3=contador3+1;
+			contador2++;
+			
 		}
 		else
 		{
-			alert("Eso que ingresaste no es un numero.");
+			contador3++;
+		}
+		if(numero%2==0)
+		{
+			contador4++;
 		}
 		
-		respuesta=prompt("Si queres dejar de ingresar numeros escribi no, si queres seguir, escribi si.");
+		respuesta=prompt("Queres seguir ingresando numeros?");
 
-	}
+	}while(respuesta=="si");
 	
+	if(contador2!=0)
+	{
+	promedioPositivo=positivos/contador2;
+	}
+	if(contador!=0)
+	{
+		promedioNegativo=negativos/contador;
+	}
 	diferencia=positivos-negativos;
-
-	document.write("Los negativos suman: "+negativos+"<br/>");
+	
+	
+	document.write("Los negativos suman: "+negativos+"</br>");
 	document.write("La cantidad de negativos es: "+contador+"<br/>");
 	document.write("Los positivos suman: "+positivos+"<br/>");
 	document.write("La cantidad de positivos es: "+contador2+"<br/>");

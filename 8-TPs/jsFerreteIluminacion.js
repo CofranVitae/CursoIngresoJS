@@ -75,13 +75,12 @@ function CalcularPrecio ()
 
      }
     
+     document.getElementById("precioDescuento").value=precio;
+     
      if(precio>120)
      {
          IIBB=(precio*10)/100;
          precio+=(precio*10)/100;
          alert("usted pago $"+IIBB+" de IIBB")
      }
-     
-     document.getElementById("precioDescuento").value=precio;
-
 }

@@ -11,17 +11,19 @@ function mostrar()
 	{
 		
 		
-		suma=prompt("Escribì un nùmero.");
-		respuesta=prompt("Si no queres ingresar mas numeros, escibi escribi no.");
+		suma=parseInt(prompt("Escribì un nùmero."));
+		while(isNaN(suma))
+		{
+			suma=parseInt(prompt("No es valido, ingresa otro numero"));
+		}
 		
 		contador=parseInt(contador);
 		acumulador=parseInt(acumulador);
-		suma=parseInt(suma);
 		
 		contador=contador+1;
 		acumulador=suma+acumulador;
 		
-		
+		respuesta=prompt("Queres ingresar mas numeros?");
 	}
 
 document.getElementById('suma').value=acumulador;

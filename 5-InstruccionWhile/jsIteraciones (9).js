@@ -4,16 +4,19 @@ function mostrar()
 	var numero;
 	var maximo=0;
 	var minimo=0;
-	var respuesta="si";
+	var respuesta;
 	var contador=0;
 	
-	while(respuesta=="si")
+	do
 	{
-		numero=prompt("Escribí un número");
-		respuesta=prompt("¿Queres seguir ingresando numeros? escribi si, si no escribi cualquier otra cosa.");
-		numero=parseInt(numero);
+		numero=parseInt(prompt("Escribí un número"));
 		
-	 	if(contador==0)
+		while(isNaN(numero))
+		{
+			numero=parseInt(prompt("Ese dato no es valido, volve a ingresar un numero"));
+		}
+		
+		if(contador==0)
 		{
 			minimo=numero;
 			maximo=numero;
@@ -29,7 +32,8 @@ function mostrar()
 		
 		contador=contador+1;
 		
-	}	
+		respuesta=prompt("¿Queres seguir ingresando numeros? escribi si, si no escribi cualquier otra cosa.");
+	}while(respuesta=="si");	
 
 	document.getElementById("maximo").value=maximo;
 	document.getElementById("minimo").value=minimo;
