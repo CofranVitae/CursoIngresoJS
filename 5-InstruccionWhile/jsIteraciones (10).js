@@ -11,7 +11,6 @@ function mostrar()
 	var promedioNegativo=0;
 	var promedioPositivo=0;
 	var diferencia;
-	var resto;
 	var respuesta="si"
 	
 	do
