@@ -17,10 +17,10 @@ function mostrar()
             nota=parseInt(prompt("Dato invalido, Ingrese una nota del 0 al 10"));
         }
 
-        sexo=prompt("Ingrese un sexo, f para femenino y m para masculino");
+        sexo=prompt("Ingrese un sexo, f para femenino y m para masculino").toLowerCase();
         while(sexo!="f" && sexo!="m")
         {
-            sexo=prompt("Dato invalido, Ingrese un sexo, f para femenino y m para masculino");
+            sexo=prompt("Dato invalido, Ingrese un sexo, f para femenino y m para masculino").toLowerCase();
         }
 
         acumNotas=nota+acumNotas;

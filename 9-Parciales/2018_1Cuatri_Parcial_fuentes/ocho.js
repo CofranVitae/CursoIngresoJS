@@ -18,7 +18,7 @@ function mostrar()
     do
     {
         letra=prompt("ingrese una letra");
-        while(!(isNaN(letra)) || letra==null || letra.length==0)
+        while(!(isNaN(letra)) || letra.length==0)
         {
             letra=prompt("dato invalido, ingrese una letra");
         }

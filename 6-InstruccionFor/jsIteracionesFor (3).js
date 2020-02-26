@@ -2,11 +2,11 @@ function mostrar()
 {
 
 var repeticiones =parseInt(prompt("ingrese el número de repeticiones"));
-var contador;
+var i;
 
-for(contador=0;contador!=repeticiones;contador++)
+for(i=0;i!=repeticiones;i++)
 {
-    alert("Hola UTN FRA")
+    alert("Hola UTN FRA");
 }
 
 
