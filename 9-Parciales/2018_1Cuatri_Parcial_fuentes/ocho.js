@@ -1,94 +1,84 @@
 function mostrar()
 {
-    var letra;
-    var numero;
-    var respuesta;
-    var cantImPares=0;
-    var cantPares=0;
-    var cantCeros=0;
-    var promedio;
-    var letMax;
-    var letMin;
-    var maximo=0;
-    var minimo;
-    var pos=0;
-    var neg=0;
-    var i=0;
+   var letra;
+   var numero;
+   var pares=0;
+   var impares=0;
+   var ceros=0;
+   var promPos;
+   var acumPos=0;
+   var acumNeg=0;
+   var numMax;
+   var letraMax;
+   var numMin;
+   var letraMin;
+   var respuesta;
+   var i=0;
+   var contPos=0;
 
-    do
-    {
-        letra=prompt("ingrese una letra");
-        while(!(isNaN(letra)) || letra.length==0)
-        {
-            letra=prompt("dato invalido, ingrese una letra");
-        }
+   do{
+       letra=prompt("Ingrese una letra").toLowerCase();
+       while(!(letra>= "a" && letra<= "z") || letra.length>1)
+       {
+        letra=prompt("dato invalido. Ingrese una letra").toLowerCase();
+       }
 
-        numero=parseInt(prompt("Ingrese un numero de -100 a 100"));
-        while(numero<-100 || numero>100 || isNaN(numero))
-        {
-            numero=parseInt(prompt("dato invalido, ingrese un numero de -100 a 100"))
-        }
+       numero=parseInt(prompt("Ingrese un numero entre -100 y 100"));
+       while(isNaN(numero) || numero <-100 || numero > 100)
+       {
+        numero=parseInt(prompt("Dato invalido. Ingrese un numero entre -100 y 100"));
+       }
 
         if(numero%2==0)
         {
-            cantPares++;
+            pares++;
+        }else{
+            impares++;
         }
-            else
-            {
-                cantImPares++;
-            }
 
         if(numero==0)
         {
-            cantCeros++;
-        }
-            else if(numero>0)
-            {
-                pos+=numero;
-            }
-            else
-            {
-                neg+=numero;
-            }
+            ceros++;
         
-        if(maximo==0)
-        {
-            maximo=numero;
-            minimo=numero;
-            letMin=letra;
-            letMax=letra;
-        }
+        }else if(numero<0){
+            
+            acumNeg=acumNeg+numero;
         
-        if(numero>maximo)
-        {
-            maximo=numero;
-            letMax=letra;
+        }else{
+            
+            contPos++;
+            acumPos=acumPos+numero;
+            
         }
 
-        if(numero<minimo)
+        if(i==0 || numero>numMax)
         {
-            minimo=numero;
-            letMin=letra;
+            numMax=numero;
+            letraMax=letra;
         }
-        
-        respuesta=prompt("quiere seguir ingresando?");
+        if(i==0 || numero<numMin){
+            numMin=numero;
+            letraMin=letra;
+        }
 
         i++;
-        
-    }while(respuesta=="si");
 
-    promedio=pos/i;
+       respuesta=prompt("Quiere seguir ingresando datos?").toLowerCase();
+       
+   }while(respuesta != "no" && respuesta != "n");
 
-    document.write("la cantidad de numeros pares es: "+cantPares+"</br>");
-    document.write("la cantidad de numeros impares es: "+cantImPares+"</br>");
-    document.write("la cantidad de ceros es: "+cantCeros+"</br>");
-    document.write("el promedio de los numeros positivos es: "+promedio+"</br>");
-    document.write("la suma de los negativos es: "+neg+"</br>");
-    document.write("el numero y la letra maximos son: "+maximo+" "+letMax+"<br/>");
-    document.write("el numero y la letra minimos son: "+minimo+" "+letMin);
-
-
-
+   promPos=acumPos/contPos;
+   
+   document.write("La cantidad de numeros pares es: "+pares+"</br>");
+   document.write("La cantidad de numeros impares es: "+impares+"</br>");
+   document.write("La cantidad de ceos es: "+ceros+"</br>");
+   document.write("El promedio de todos los positivos ingresados es: "+promPos+"</br>");
+   document.write("La suma de los numeros negativos es: "+acumNeg+"</br>");
+   document.write("El numero maximo ingresado es: "+numMax+" con la letra "+letraMax+"</br>");
+   document.write("El numero minimo ingresado es: "+numMin+" con la letra "+letraMin);
+   
+   
+   
 
 
 }

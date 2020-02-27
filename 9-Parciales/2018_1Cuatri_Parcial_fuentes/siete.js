@@ -1,52 +1,51 @@
 function mostrar()
 {
+    var i;
     var nota;
     var sexo;
-    var i;
-    var acumNotas=0;
+    var acumulador=0;
+    var notaMasBaja;
+    var SexMasBajo;
     var promedio;
-    var baja;
-    var sexoBajo;
-    var cantMayor6=0;
+    var varonesMay6=0;
 
     for(i=0;i<5;i++)
     {
-        nota=parseInt(prompt("Ingrese una nota del 0 al 10"));
+        nota=parseInt(prompt("ingrese una nota entre 0 y 10"));
+        
         while(isNaN(nota) || nota<0 || nota>10)
         {
-            nota=parseInt(prompt("Dato invalido, Ingrese una nota del 0 al 10"));
+            nota=parseInt(prompt("Dato invalido. ingrese una nota entre 0 y 10"));
         }
 
-        sexo=prompt("Ingrese un sexo, f para femenino y m para masculino").toLowerCase();
-        while(sexo!="f" && sexo!="m")
+        sexo=prompt("Ingrese un sexo, m para masculino o f para femenino").toLowerCase();
+
+        while(sexo!= "f" && sexo!="m")
         {
-            sexo=prompt("Dato invalido, Ingrese un sexo, f para femenino y m para masculino").toLowerCase();
+            sexo=prompt("Dato invalido. Ingrese un sexo, m para masculino o f para femenino").toLowerCase();
         }
 
-        acumNotas=nota+acumNotas;
+    acumulador=acumulador+nota;
 
-        if(i==0)
-        {
-            baja=nota;
-            sexoBajo=sexo;
-        }
-        if(baja>nota)
-        {
-            baja=nota;
-            sexoBajo=sexo;
-        }
-        if(sexo=="m" && nota>=6)
-        {
-            cantMayor6++;
-        }
+    if(nota<notaMasBaja || i==0)
+    {
+        notaMasBaja=nota;
+        SexMasBajo=sexo;
     }
-    
-    promedio=acumNotas/i;
 
-    alert("el promedio de las notas es "+promedio);
-    alert("La nota mas baja es "+baja+" y el sexo de ese alumno es "+sexoBajo);
-    alert("la cantidad de varones con notas mayor a 6 es "+cantMayor6);
 
+    if(sexo=="m" && nota>=6)
+    {
+        varonesMay6++;
+    }
+
+    }
+
+    promedio=acumulador/i;
+
+    document.write("a) El promedio de las notas totales es: "+promedio+"</br>");
+    document.write("b) La nota más baja y el sexo de esa persona es: "+notaMasBaja+"  "+SexMasBajo+"</br>");
+    document.write("c) La cantidad de varones que su nota haya sido mayor o igual a 6 es: "+varonesMay6);
 }
 
 
