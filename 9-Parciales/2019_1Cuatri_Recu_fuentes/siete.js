@@ -111,7 +111,7 @@ function mostrar()
 
     if(contadorEfectivo==contadorQR && contadorEfectivo==contadorTarjeta)
     {
-        formadePagoMasUsada="Efectivo, QR y tarjeta por igual"
+        formadePagoMasUsada="Efectivo, QR y tarjeta por igual";
     }
 
     promedioDias=acumuladorPromedio/i;

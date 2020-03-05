@@ -1,6 +1,6 @@
 function mostrar()
 {
-    var marca;
+    /*var marca;
     var peso;
     var temperatura;
     var temperaturaPar=0;
@@ -64,7 +64,103 @@ function mostrar()
     document.write("b) La marca del producto más pesado es: "+marcaPesada+" con un peso de "+pesoMaximo+"</br>");
     document.write("c) La cantidad de productos que se conservan a menos de 0 grados es: "+menos0º+"</br>"); 
     document.write("d) El promedio del peso de todos los productos es: "+promedioPeso+"</br>");
-    document.write("f) El peso máximo y el mínimo es: "+pesoMaximo+" "+pesoMinimo+" respectivamente");
+    document.write("f) El peso máximo y el mínimo es: "+pesoMaximo+" "+pesoMinimo+" respectivamente");*/
+    
+    var marca;
+    var pesoPorBolsa;
+    var pesoTotal;
+    var Contenedor=0;
+    var cantidadDeBolsas;
+    var importePorBolsa;
+    var respuesta;
+
+    var pesoMaximo;
+    var bolsasMaximas;
+    var importeMaximo;
+    var pesoMinimo;
+
+    var marcaMasKilos;
+    var marcaMasBolsas;
+    var marcaMayorImporte;
+
+    var importeMenosKilos;
+    var marcaMenosKilos;
+
+    var i=0;
+
+    do{
+        if(Contenedor>=1000)
+        {
+            break;
+        }
+
+        marca=prompt("Ingrese una marca de alimento para perros");
+        while(!(isNaN(marca)) || marca.length==0)
+        {
+            marca=prompt("Ingrese una marca de alimento para perros");
+        }
+
+        pesoPorBolsa=parseInt(prompt("Ingrese el peso de cada bolsa, que no supere 1000Kg"));
+        while(pesoPorBolsa>1000 || pesoPorBolsa<1 || isNaN(pesoPorBolsa))
+        {
+            pesoPorBolsa=parseInt(prompt("Ingrese el peso de cada bolsa, que no supere 1000Kg"));
+        }
+
+        cantidadDeBolsas=parseInt(prompt("Ingrese la cantidad de bolsas"));
+        while(isNaN(cantidadDeBolsas) || cantidadDeBolsas<1)
+        {
+            cantidadDeBolsas=parseInt(prompt("Ingrese la cantidad de bolsas"));
+        }
+
+        importePorBolsa=parseInt(prompt("Ingrese el importe por cada bolsa"));
+        while(isNaN(importePorBolsa || importePorBolsa<0))
+        {
+            importePorBolsa=parseInt(prompt("Ingrese el importe por cada bolsa"));
+        }
+
+            pesoTotal=(cantidadDeBolsas*pesoPorBolsa);
+            Contenedor=Contenedor+(cantidadDeBolsas*pesoPorBolsa);
+
+            if(i==0 || pesoPorBolsa<pesoMinimo)
+            {
+                pesoMinimo=pesoPorBolsa;
+                importeMenosKilos=importePorBolsa;
+                marcaMenosKilos=marca;
+
+            }
+
+            if(i==0 || pesoTotal>pesoMaximo)
+            {
+                pesoMaximo=pesoTotal;
+                marcaMasKilos=marca;
+                
+            }
+
+            if(i==0 || cantidadDeBolsas>bolsasMaximas)
+            {
+                marcaMasBolsas=marca;
+                bolsasMaximas=cantidadDeBolsas;
+            }
+
+            if(i==0 || importePorBolsa>importeMaximo)
+            {
+                importeMaximo=importePorBolsa;
+                marcaMayorImporte=marca;
+            }
+
+            i++;
+
+
+
+        respuesta=prompt("Quiere seguir ingresando?")
+    }while(respuesta=="si" || respuesta=="s" && Contenedor<1000);
+
+    
+
+document.write("la marca que tiene mas kilos es "+marcaMasKilos+" y su cantidad de kilos es de "+pesoMaximo);
+document.write("</br>la marca que tiene mas bolsas de alimento es "+marcaMasBolsas+" y su cantidad de bolsas es de "+bolsasMaximas);
+document.write("</br>la marca que tiene el mayor importe por bolsa es "+marcaMayorImporte+" y su iporte es de "+importeMaximo);
+document.write("</br>el importe y la marca de la bolsa de aliemto menos pesada es de "+importeMenosKilos+"$ , su marca es "+marcaMenosKilos+" y el peso de la bolsa es de "+pesoMinimo);
 }
 
     
