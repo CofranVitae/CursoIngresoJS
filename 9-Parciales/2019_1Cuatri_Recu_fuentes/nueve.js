@@ -1,6 +1,7 @@
 function mostrar()
 {
-    var nombre;
+
+    /*var nombre;
     var edad;
     var sexo;
     var nota;
@@ -128,7 +129,9 @@ function mostrar()
    document.write( "b) El promedio de notas de los menores de edad "+promedioMenor+"</br>");
    document.write( "c) El promedio de notas de los adolescentes. "+promedioAdolesc+"</br>");
    document.write( "d) El promedio de notas de los mayores "+promedioMayor+"</br>");
-   document.write( "f) El promedio de notas por sexo masculino: "+promedioMasc+" y femenino: "+promedioFem);
+   document.write( "f) El promedio de notas por sexo masculino: "+promedioMasc+" y femenino: "+promedioFem);*/
+
+    
 }
 
 
